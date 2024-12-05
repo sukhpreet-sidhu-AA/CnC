@@ -44,15 +44,15 @@ function ProfileButton() {
 
   return (
     <>
-      <button onClick={toggleMenu}>
+      <button id='profileButton' onClick={toggleMenu}>
         <FaUserCircle />
       </button>
       {showMenu && (
         <ul className={"profile-dropdown"} ref={ulRef}>
           {user ? (
             <>
-              <li>{user.username}</li>
-              <li>{user.email}</li>
+              <li className="no-point">{user.username}</li>
+              <li className="no-point">{user.email}</li>
               <li>
                 <button onClick={logout}>Log Out</button>
               </li>

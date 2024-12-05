@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux"
 import { useModal } from "../../context/Modal"
 import { deleteCharThunk } from "../../redux/character"
+import './Delete.css'
 
 function DeleteCharacterModal({id}){
     const dispatch = useDispatch()

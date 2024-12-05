@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom"
 import { getCharThunk } from "../../redux/character"
 import { useDispatch, useSelector } from "react-redux"
 import { updateHPThunk } from "../../redux/character"
+import './CharacterPage.css'
 
 
 function CharacterPage(){
@@ -57,7 +58,7 @@ function CharacterPage(){
     
 
     return (
-        <div>
+        <div id="page">
             <div>
                 <h2>{character.name}</h2>
                 <h3>{character.Race.name} {character.Class.name}</h3>
@@ -67,9 +68,9 @@ function CharacterPage(){
                     <p>{character.description}</p>
                 )}
             </div>
-            <div>
+            <div id="right-side">
                 <div>
-                    <form>
+                    <form id="hp-change">
                         <button type="submit" disabled={!validInt} onClick={heal}>Heal</button>
                         <input
                             type="text"
@@ -79,16 +80,17 @@ function CharacterPage(){
                         />
                         <button type="submit" disabled={!validInt} onClick={damage}>Damage</button>
                     </form>
-                    <div>
-                        <div>
-                            <div>
+                    <div id="hp">
+                        <div id="hp-stats">
+                            <div className="hp-vert">
                                 <p>current</p>
                                 <h3>{character.hp}</h3>
                             </div>
-                            <div>
-                                <p> / </p>
+                            <div className="hp-vert">
+                                <p>/</p>
+                                <h3> / </h3>
                             </div>
-                            <div>
+                            <div className="hp-vert">
                                 <p>max</p>
                                 <h3>{maxHp}</h3>
                             </div>
@@ -98,7 +100,7 @@ function CharacterPage(){
                         </div>
                     </div>
                 </div>
-                <div>
+                <div id="stats">
                     <div>
                         <p>Strength</p>
                         <h2>{`${getModifier(character.strength)}`}</h2>

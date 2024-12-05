@@ -4,7 +4,7 @@
 
 #point-assignment{
     display: flex;
-    padding: 0px 10px
+    padding: 0px 10px;
 }
 
 #points-side{
@@ -16,7 +16,21 @@
 .stat-adjust{
     display: flex;
     flex-direction: column;
-    padding: 0px 10px
+    padding: 0px 10px;
+    align-items: center;
+}
+
+.stat-adjust > button{
+    width: 80px;
+}
+
+#char-create-info{
+    display: flex;
+    flex-direction: column;
+}
+
+#char-create-info > label{
+    margin: 10px 0px;
 }
 
 /* #test{

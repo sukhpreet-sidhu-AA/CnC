@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux"
 import { updateCharCampaign } from "../../redux/character"
 import { useModal } from "../../context/Modal"
 import { getCampaignThunk } from "../../redux/campaign"
+import './CampaignPage.css'
 
 function AddCharacterPage({ campId }){
 
@@ -36,10 +37,12 @@ function AddCharacterPage({ campId }){
     }
 
     return (
-        <div>
+        <div id="window">
+            <h2>Search for Characters by Username</h2>
             <input 
                 type="text"
-                value={username} 
+                value={username}
+                placeholder="Enter Username" 
                 onChange={(e) => setUsername(e.target.value)}
             />
             <button onClick={search} disabled={!username}>Search</button>

@@ -1,0 +1,50 @@
+.modal-button{
+    padding: 0px;
+    margin: 10px
+}
+
+.modal-button > li{
+    padding: 3px 10px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#two-list{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.list-of{
+    width: 300px
+}
+
+.create-button {
+    margin-top: 20px;
+}
+
+.char-info > a{
+    color: black;
+    text-decoration: none;
+}
+
+.char-info{
+    padding: 0px 5px;
+    border: solid 2px red;
+    margin: 10px 0px;
+    background-color: #e3e3e3;
+}
+
+.char-info:hover{
+    background-color: #c7c7c7;
+}
+
+#race-class{
+    margin: 0px;
+    padding-bottom: 15px;
+}
+
+.name{
+    margin: 0px;
+    padding: 15px 0px
+}

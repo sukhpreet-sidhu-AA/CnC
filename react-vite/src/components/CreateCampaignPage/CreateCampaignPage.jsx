@@ -2,6 +2,7 @@ import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { createCampaignThunk } from "../../redux/campaign"
 import { useNavigate } from "react-router-dom"
+import './CCP.css'
 
 function CreateCampaignPage(){
 
@@ -35,9 +36,9 @@ function CreateCampaignPage(){
     }
 
     return (
-        <form>
+        <form id="camp-edit-form">
             <label>
-                    Name
+                    <span>Name </span>
                     <input 
                         type="text"
                         name="name"
@@ -47,8 +48,9 @@ function CreateCampaignPage(){
                     {errors.name && (<div className="errors">{errors.name}</div>)}
                 </label>
                 <label>
-                    Description
+                    <p>Description</p>
                     <textarea
+                        className="description-box"
                         type="text"
                         name="description"
                         value={description}
@@ -57,7 +59,7 @@ function CreateCampaignPage(){
                     {errors.description && (<div className="errors">{errors.description}</div>)}
                 </label>
                 <button
-                    id="submit-button"
+                    id="char-edit-button"
                     type="submit"
                     onClick={submitHandler}
                 >

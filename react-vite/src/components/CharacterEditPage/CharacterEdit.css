@@ -1,0 +1,18 @@
+#char-form-edit{
+    display: flex;
+    flex-direction: column;
+}
+
+#char-form-edit > label{
+    margin: 10px;
+}
+
+#char-edit-button{
+    width: 200px;
+    margin: 20px;
+}
+
+.description-box{
+    width: 300px;
+    height: 100px;
+}

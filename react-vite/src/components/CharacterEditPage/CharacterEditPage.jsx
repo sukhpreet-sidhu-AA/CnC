@@ -3,6 +3,7 @@ import { getCharThunk } from "../../redux/character"
 import { useParams, useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { updateCharThunk } from "../../redux/character"
+import './CharacterEdit.css'
 
 function CharacterEditPage(){
     const { charId } = useParams()
@@ -58,9 +59,9 @@ function CharacterEditPage(){
     }
 
     return(
-        <form>
+        <form id="char-form-edit">
             <label>
-                Name
+                <span>Name </span>
                 <input 
                     type="text"
                     name="name"
@@ -70,8 +71,9 @@ function CharacterEditPage(){
                 {errors.name && (<div className="errors">{errors.name}</div>)}
             </label>
             <label>
-                Description
+                <p>Description</p>
                 <textarea 
+                    className="description-box"
                     type="text"
                     name="description"
                     value={description}
@@ -80,7 +82,7 @@ function CharacterEditPage(){
                 {errors.description && (<div className="errors">{errors.description}</div>)}
             </label>
             <label>
-                    Alignment
+                    <span>Alignment </span>
                     <select 
                         onChange={(e) => setAlignment(e.target.value)}
                         value={alignment}
@@ -90,7 +92,7 @@ function CharacterEditPage(){
                         ))}
                     </select>
             </label>
-            <button type="submit" onClick={submitHandler}>Update Character</button>
+            <button id="char-edit-button" type="submit" onClick={submitHandler}>Update Character</button>
         </form>
     )
 

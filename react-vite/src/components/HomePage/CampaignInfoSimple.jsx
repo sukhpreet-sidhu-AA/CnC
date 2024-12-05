@@ -3,6 +3,7 @@ import { useSelector } from "react-redux"
 // import { useNavigate } from "react-router-dom"
 import OpenModalMenuItem from "../Navigation/OpenModalMenuItem"
 import DeleteCampaignModal from "../DeleteCampaignModal"
+import './Homepage.css'
 
 function CampaignInfoSimple({ campList }){
     const user = useSelector(store => store.session.user)
@@ -10,9 +11,9 @@ function CampaignInfoSimple({ campList }){
     return (
         <div>
             {campList.map(({ id, name, user_id}) => (
-                <div key={id}>
+                <div className="char-info" key={id}>
                     <NavLink to={`/campaigns/${id}`}>
-                        <h3>{name}</h3>
+                        <h3 className="name">{name}</h3>
                         {/* <p>Campaign Started {created.split(" ").slice(1,4).join(" ")}</p> */}
                     </NavLink>
                     {user.id === user_id && (

@@ -154,59 +154,62 @@ function CreateCharacterPage(){
         <div id="form-wrapper">
             <form id="create-character-form">
                 <h1>Create a New Character</h1>
-                <label>
-                    Name
-                    <input 
-                        type="text"
-                        name="name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                    />
-                    {errors.name && (<div className="errors">{errors.name}</div>)}
-                </label>
-                <label>
-                    Description
-                    <textarea
-                        type="text"
-                        name="description"
-                        value={description}
-                        onChange={(e) => setDescription(e.target.value)}
-                    />
-                    {errors.description && (<div className="errors">{errors.description}</div>)}
-                </label>
-                <label>
-                    Class
-                    <select 
-                        onChange={(e) => setClass_id(e.target.value)}
-                        defaultValue={class_id}
-                    >
-                        {classList.map((cls, id) => (
-                            <option key={id}>{cls}</option>
-                        ))}
-                    </select>
-                </label>
-                <label>
-                    Race
-                    <select 
-                        onChange={(e) => setRace_id(e.target.value)}
-                        defaultValue={race_id}
-                    >
-                        {raceList.map((race, id) => (
-                            <option key={id}>{race}</option>
-                        ))}
-                    </select>
-                </label>
-                <label>
-                    Alignment
-                    <select 
-                        onChange={(e) => setAlignment(e.target.value)}
-                        defaultValue={alignment}
-                    >
-                        {alignmentList.map((align, id) => (
-                            <option key={id}>{align}</option>
-                        ))}
-                    </select>
-                </label>
+                <div id="char-create-info">
+                    <label>
+                        <span>Name </span>
+                        <input 
+                            type="text"
+                            name="name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                        {errors.name && (<div className="errors">{errors.name}</div>)}
+                    </label>
+                    <label>
+                        <p>Description</p>
+                        <textarea
+                            className="description-box"
+                            type="text"
+                            name="description"
+                            value={description}
+                            onChange={(e) => setDescription(e.target.value)}
+                        />
+                        {errors.description && (<div className="errors">{errors.description}</div>)}
+                    </label>
+                    <label>
+                        <span>Class </span>
+                        <select 
+                            onChange={(e) => setClass_id(e.target.value)}
+                            defaultValue={class_id}
+                        >
+                            {classList.map((cls, id) => (
+                                <option key={id}>{cls}</option>
+                            ))}
+                        </select>
+                    </label>
+                    <label>
+                        <span>Race </span>
+                        <select 
+                            onChange={(e) => setRace_id(e.target.value)}
+                            defaultValue={race_id}
+                        >
+                            {raceList.map((race, id) => (
+                                <option key={id}>{race}</option>
+                            ))}
+                        </select>
+                    </label>
+                    <label>
+                        <span>Alignment </span>
+                        <select 
+                            onChange={(e) => setAlignment(e.target.value)}
+                            defaultValue={alignment}
+                        >
+                            {alignmentList.map((align, id) => (
+                                <option key={id}>{align}</option>
+                            ))}
+                        </select>
+                    </label>
+                </div>
                 <div>
                     <h2>Assign Points</h2>
                     <p>Each trait may have a maximum of 15 points and a minimum of 8 points</p>
