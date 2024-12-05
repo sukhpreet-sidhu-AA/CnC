@@ -1,0 +1,12 @@
+<option data-v-b6dc6584="" value="barbarian">Barbarian</option>
+<option data-v-b6dc6584="" value="bard">Bard</option>
+<option data-v-b6dc6584="" value="cleric">Cleric</option>
+<option data-v-b6dc6584="" value="druid">Druid</option>
+<option data-v-b6dc6584="" value="fighter">Fighter</option>
+<option data-v-b6dc6584="" value="monk">Monk</option>
+<option data-v-b6dc6584="" value="paladin">Paladin</option>
+<option data-v-b6dc6584="" value="ranger">Ranger</option>
+<option data-v-b6dc6584="" value="rogue">Rogue</option>
+<option data-v-b6dc6584="" value="sorcerer">Sorcerer</option>
+<option data-v-b6dc6584="" value="warlock">Warlock</option>
+<option data-v-b6dc6584="" value="wizard">Wizard</option>
