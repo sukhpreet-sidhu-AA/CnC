@@ -59,7 +59,7 @@ function HomePage() {
                 </div>)
                 :
                 (<>
-                    <h1>Welcome to Campaigns and Characters! A site where you can manage your DnD characters and campaigns digitally.</h1>
+                    <h1>Welcome to Campaigns and Characters! A site where you can manage your D&D characters and campaigns digitally.</h1>
                     <h2>Log in or create and account to get started!</h2>
                     <button className="modal-button">
                         <OpenModalMenuItem
