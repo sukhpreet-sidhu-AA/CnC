@@ -30,6 +30,9 @@ def user_search(username):
     user = User.query.filter(User.username == username).one_or_none()
     # print("================================", user, flush='true')
     if(user):
-        return user.to_dict()
+        if (len(user.to_dict()["Characters"]) == 0):
+            return {"error":"User has no characters"}
+        else:
+            return user.to_dict()
     else:
         return {"error":"Username does not exist"}
